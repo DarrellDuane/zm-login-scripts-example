@@ -1,9 +1,14 @@
 <?php
 
-$secretKey="change_to_another_secret_key";     // your secret key as configured in ZoneMinder
-$userName="zm_user_name";                      // your ZoneMinder username
-$passwordHash="get_password_hash_from_mysql_database_for_this_user";  // obtain from MySQL
-$domain="your_zone_minder_servername.com/zm";   // domain and location on server of ZoneMinder
+//Its important to use single quotes around these variables.
+//The new password hash for version 1.32 and above often has dollar signs followed by letters which represent
+// a variable that isn't set, so that part of the text will go away if you use double quotes and prevent this from working.
+
+
+$secretKey='change_to_another_secret_key';     // your secret key as configured in ZoneMinder
+$userName='zm_user_name';                      // your ZoneMinder username
+$passwordHash='-ZM-get_password_hash_from_mysql_database_for_this_user';  // obtain from MySQL
+$domain='your_zone_minder_servername.com/zm';   // domain and location on server of ZoneMinder
 
 // Calculate date information (needs to be within 2 hours)
 $hour = date('G');   
